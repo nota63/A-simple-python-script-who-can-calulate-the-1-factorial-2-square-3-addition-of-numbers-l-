@@ -1,0 +1,43 @@
+x=input("what are you interested in ? factorial\ square\ add :")
+if "factorial" in x:
+     def factorial(n):
+       if  n==0 or n ==1:
+          return 1
+       else:
+           return n* factorial(n-1)
+
+
+     while True:
+          try:
+
+            c=int(input('Enter the number:'))
+            if c> 0 : 
+              break
+            else: 
+               print("invalid input!")
+          except ValueError:
+             print(" some Error occured!")
+
+     result= factorial(c)
+     print(f" the factorial of {c} is {result} 😊") 
+
+elif "square" in x:
+    def square():
+          try: 
+            v=int(input("Enter the number:"))  
+            result2 = v**2
+            print(f" The square of {v} is {result2} 😊")
+          except ValueError:
+            print("Some error occured")
+    square()
+
+elif "add" in x:
+    def add():
+          try:
+            b=int(input("Enter first number:"))
+            n=int(input("Enter second number:")) 
+            result3= b + n
+            print(f" The addition of {b} and {n} is {result3} 😊")
+          except ValueError:
+            print("Value Error identified!!")
+    add()   
